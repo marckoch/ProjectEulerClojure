@@ -1,7 +1,7 @@
 (ns projecteuler.pe004)
 
 (defn palindrome? [n]
-  (= (seq (char-array (str n)))
+  (= (seq (str n))
      (reverse (str n))))
 
 (def palindromes
@@ -11,6 +11,8 @@
         :when (palindrome? n)]
     n))
 
+palindromes
+
 (reduce max palindromes)
 
 ;; experiments
@@ -19,7 +21,5 @@
   (palindrome? 110)
 
   (palindrome? 121)
-
-  (seq (char-array (str 121)))
 
   (apply str (reverse (str 121))))
