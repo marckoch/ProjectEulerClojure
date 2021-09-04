@@ -1,21 +1,16 @@
-(ns projecteuler.pe002)
-
-;; https://blog.klipse.tech/clojurescript/2016/04/19/fibonacci.html
-(def fibonacci-seq
-  ((fn fib [a b]
-     (lazy-seq (cons a (fib b (+ a b)))))
-   0 1))
+(ns projecteuler.pe002
+  (:require [math.fibonacci :as fib]))
 
 ;; some tests
 (comment
-  (take 10 fibonacci-seq)
+  (take 10 fib/fibonacci-seq)
 
   (take-while
    #(> 4e6 %)
-   fibonacci-seq))
+   fib/fibonacci-seq))
 
 (->>
- fibonacci-seq
+ fib/fibonacci-seq
  (take-while #(< % 4e6))
  (filter #(even? %))
  (reduce +))
