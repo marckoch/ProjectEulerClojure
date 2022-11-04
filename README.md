@@ -2,6 +2,8 @@
 
 Some solutions done in clojure ❤️ for Project Euler
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/marckoch/ProjectEulerClojure)
+ 
 ## Usage
 
 FIXME
