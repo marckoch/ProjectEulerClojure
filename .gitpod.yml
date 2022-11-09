@@ -4,6 +4,7 @@ image:
 vscode:
   extensions:
     - betterthantomorrow.calva
+    - mhutchie.git-graph
 
 tasks:
   - name: Prepare deps
