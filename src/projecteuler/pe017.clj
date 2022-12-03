@@ -51,7 +51,7 @@ numbers
     ; 101 to 999
     (< 100 n 1000) (str (get numbers (quot n 100)) " hundred and " (number->british-english (rem n 100)))
     ; 1000
-    1000 "one thousand"
+    (= n 1000) "one thousand"
     :else nil))
 
 (number->british-english 993)
